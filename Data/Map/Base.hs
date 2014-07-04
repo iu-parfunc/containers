@@ -466,6 +466,8 @@ member = go
 {-# INLINE member #-}
 #endif
 
+infix 4 member
+
 -- | /O(log n)/. Is the key not a member of the map? See also 'member'.
 --
 -- > notMember 5 (fromList [(5,'a'), (3,'b')]) == False
@@ -478,6 +480,8 @@ notMember k m = not $ member k m
 #else
 {-# INLINE notMember #-}
 #endif
+
+infix 4 notMember
 
 -- | /O(log n)/. Find the value at a key.
 -- Calls 'error' when the element can not be found.
@@ -1241,6 +1245,8 @@ union t1 t2 = hedgeUnion NothingS NothingS t1 t2
 {-# INLINABLE union #-}
 #endif
 
+infixl 5 union
+
 -- left-biased hedge union
 hedgeUnion :: Ord a => MaybeS a -> MaybeS a -> Map a b -> Map a b -> Map a b
 hedgeUnion _   _   t1  Tip = t1
@@ -1360,6 +1366,8 @@ intersection t1 t2 = hedgeInt NothingS NothingS t1 t2
 #if __GLASGOW_HASKELL__ >= 700
 {-# INLINABLE intersection #-}
 #endif
+
+infixl 5 intersection
 
 hedgeInt :: Ord k => MaybeS k -> MaybeS k -> Map k a -> Map k b -> Map k a
 hedgeInt _ _ _   Tip = Tip
