@@ -1,5 +1,5 @@
 name: containers
-version: 0.5.6.3
+version: 0.5.6.99
 license: BSD3
 license-file: LICENSE
 maintainer: fox@ucw.cz
@@ -46,6 +46,8 @@ Library
         Data.Map.Lazy
         Data.Map.Strict
         Data.Set
+        -- Temporary for CompactNF paper:
+        Data.IntSet.Base
     if !impl(nhc98)
         exposed-modules:
             Data.Graph
@@ -53,7 +55,6 @@ Library
             Data.Tree
     other-modules:
         Data.IntMap.Base
-        Data.IntSet.Base
         Data.Map.Base
         Data.Set.Base
         Data.Utils.BitUtil
