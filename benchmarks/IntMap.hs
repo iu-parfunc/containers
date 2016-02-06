@@ -10,7 +10,10 @@ import qualified Data.IntMap as M
 import Data.Maybe (fromMaybe)
 import Prelude hiding (lookup)
 
+import VersionCheck.Containers
+
 main = do
+    printContainersVersion
     let m = M.fromAscList elems :: M.IntMap Int
     evaluate $ rnf [m]
     defaultMain

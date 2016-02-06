@@ -10,6 +10,8 @@ import qualified Data.Sequence as S
 import qualified Data.Foldable
 import System.Random
 
+import VersionCheck.Containers
+
 main = do
     let s10 = S.fromList [1..10] :: S.Seq Int
         s100 = S.fromList [1..100] :: S.Seq Int

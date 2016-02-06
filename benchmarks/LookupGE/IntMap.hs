@@ -12,8 +12,11 @@ import qualified LookupGE_IntMap as M
 import Data.Maybe (fromMaybe)
 import Prelude hiding (lookup)
 
+import VersionCheck.Containers
+
 main :: IO ()
 main = do
+    printContainersVersion
     defaultMainWith
         defaultConfig
         (liftIO . evaluate $ rnf [m_even, m_odd, m_large])

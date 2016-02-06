@@ -10,7 +10,10 @@ import Criterion.Main
 import Data.List (foldl')
 import qualified Data.Set as S
 
+import VersionCheck.Containers
+
 main = do
+    printContainersVersion
     let s = S.fromAscList elems :: S.Set Int
         s_even = S.fromAscList elems_even :: S.Set Int
         s_odd = S.fromAscList elems_odd :: S.Set Int

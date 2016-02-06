@@ -47,6 +47,7 @@ Library
         Data.Map.Lazy
         Data.Map.Strict
         Data.Set
+        VersionCheck.Containers
     if !impl(nhc98)
         exposed-modules:
             Data.Graph

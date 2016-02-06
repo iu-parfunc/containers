@@ -10,7 +10,10 @@ import qualified Data.Map as M
 import Data.Maybe (fromMaybe)
 import Prelude hiding (lookup)
 
+import VersionCheck.Containers
+
 main = do
+    printContainersVersion
     let m = M.fromAscList elems :: M.Map Int Int
         m_even = M.fromAscList elems_even :: M.Map Int Int
         m_odd = M.fromAscList elems_odd :: M.Map Int Int
