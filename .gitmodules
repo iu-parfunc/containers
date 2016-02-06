@@ -1,0 +1,9 @@
+[submodule "criterion"]
+	path = criterion
+	url = https://github.com/iu-parfunc/criterion.git
+[submodule "vector-th-unbox"]
+	path = vector-th-unbox
+	url = https://github.com/iu-parfunc/vector-th-unbox.git
+[submodule "aeson"]
+	path = aeson
+	url = https://github.com/bos/aeson.git
